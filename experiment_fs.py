@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from scipy.stats import entropy
-import fcbf.feature_selection as fs
+from fcbf import fcbf
 
 if __name__ == '__main__':
     data = pd.read_csv('../dataset/titanic/train.csv')
@@ -27,4 +27,4 @@ if __name__ == '__main__':
 
     X = data.drop('Survived', axis=1)
     y = data['Survived']
-    fs.fcbf(X, y, threshold=0, base=2, is_debug=True)
+    fcbf(X, y, threshold=0, base=2, is_debug=True)
