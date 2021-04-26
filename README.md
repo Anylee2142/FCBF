@@ -6,10 +6,10 @@
 
 
 ```python
-import fcbf.feature_selection as fs
+from fcbf import fcbf
 X = features
 y = target
-feature_set, history = fs.fcbf(X, y, threshold=0, base=2, is_debug=True)
+feature_set, history = fcbf(X, y, threshold=0, base=2, is_debug=True)
 # `feature_set` refers tooptimal feature set
 # `history` contains removed redundant features
 ```
